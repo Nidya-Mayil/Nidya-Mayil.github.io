@@ -40,4 +40,13 @@ router.post("/", (req, res) => {
   console.log(dat);
   return res.status(200).send(format);
 });
+
+router.post("/check", (req, res) => {
+  return res.status(200).send(format);
+});
+
+router.get("/check", (req, res) => {
+  return res.status(200).send(format);
+});
+
 export default router;
