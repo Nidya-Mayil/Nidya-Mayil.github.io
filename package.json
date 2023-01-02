@@ -1,0 +1,25 @@
+{
+  "name": "nidya-mayil.github.io",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nidya-Mayil/Nidya-Mayil.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nidya-Mayil/Nidya-Mayil.github.io/issues"
+  },
+  "homepage": "https://github.com/Nidya-Mayil/Nidya-Mayil.github.io#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
+  }
+}
