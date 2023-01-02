@@ -46,6 +46,7 @@ router.post("/check", (req, res) => {
 });
 
 router.get("/check", (req, res) => {
+  let { data } = req.body;
   return res.status(200).send(format);
 });
 
