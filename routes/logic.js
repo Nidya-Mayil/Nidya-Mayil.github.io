@@ -1,6 +1,4 @@
 import express from "express";
-const fs = require("fs");
-const readline = require("readline");
 const router = express.Router();
 
 let data = {
@@ -68,9 +66,9 @@ router.post("/", (req, res) => {
   //console.log(data);
   let arr = data.split("\n");
   for (let i = 0; i < arr.length - 1; i++) {
-    dat.records.push(JSON.parse(arr[i]));
+    data.records.push(JSON.parse(arr[i]));
   }
-  console.log(dat);
+  console.log(data);
   return res.status(200).send(format);
 });
 
