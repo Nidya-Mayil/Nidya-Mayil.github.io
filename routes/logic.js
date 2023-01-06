@@ -1,10 +1,14 @@
 import express from "express";
-
+const fs = require("fs");
+const readline = require("readline");
 const router = express.Router();
 
 let data = {
   records: [],
 };
+
+let set = new Set([]);
+let set_checks = new Set([]);
 
 let format = {
   vusMin: 0,
@@ -265,9 +269,10 @@ router.post("/report", async (req, res) => {
         }
       }
     }
+    setTimeout(() => resolve(format), 1000);
   });
   console.log("after", data);
-  // let result = await promise;
+  let result = await promise;
   let metrics = [
     "http_req_duration",
     "http_req_receiving",
@@ -305,8 +310,7 @@ router.post("/report", async (req, res) => {
   format.dataSent = data_sent;
   format.iterationCount = iterations;
   format.totalRequests = total_request;
-  // console.log("after after", result);
-  return res.status(200).send(format);
+  return res.status(200).send(result);
 });
 
 router.get("/check", (req, res) => {
